@@ -30,8 +30,8 @@ const MobileNavlink = ({ showMobileLink, setShowMobileLink }) => {
 
     return (
         <Fragment>
-            {showMobileLink && <section className="w-full h-auto py-6 px-8 block bg-secondary absolute top-0 left-0 z-50 lg:hidden">
-                <nav className='w-full h-full flex flex-col gap-4 items-center'>
+            {showMobileLink && <section className="w-full h-screen py-6 px-8 block bg-secondary absolute top-0 left-0 z-50 lg:hidden">
+                <nav className='w-full h-full flex flex-col gap-4 items-center justify-center'>
                     <NavLink to='/' onClick={() => homeLinkHandler('/')} className={`home-link text-stone-800 font-medium ${({ isActive }) => (isActive ? 'active' : '')}`}>
                         <>Home</>
                         <div className="underline" />

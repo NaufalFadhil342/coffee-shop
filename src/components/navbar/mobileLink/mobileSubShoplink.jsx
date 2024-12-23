@@ -13,7 +13,7 @@ const ShopLayout = ({ activeShoplink, setShowMobileLink, handleLinkClick, setAct
         <AnimatePresence>
             {activeShoplink && (
                 <motion.div
-                    className="w-full h-full bg-secondary flex flex-col py-2"
+                    className="w-full h-auto bg-secondary overflow-y-hidden flex flex-col py-2"
                     initial={{
                         height: '0',
                         visibility: 'hidden'
@@ -59,7 +59,7 @@ const ShopPages = ({ activeShoplink, setShowMobileLink, handleLinkClick, setActi
         <AnimatePresence>
             {activeShoplink && (
                 <motion.div
-                    className="w-full h-full bg-secondary flex flex-col py-2"
+                    className="w-full h-auto bg-secondary overflow-y-hidden flex flex-col py-2"
                     initial={{
                         height: '0',
                         visibility: 'hidden'
@@ -105,7 +105,7 @@ const ProductsLayout = ({ activeShoplink, setShowMobileLink, handleLinkClick, se
         <AnimatePresence>
             {activeShoplink && (
                 <motion.div
-                    className="w-full h-full bg-secondary flex flex-col py-2"
+                    className="w-full h-auto bg-secondary overflow-y-hidden flex flex-col py-2"
                     initial={{
                         height: '0',
                         visibility: 'hidden'

@@ -15,7 +15,7 @@ const PagesLink = ({ activeSublink, setShowMobileLink, handleLinkClick, setActiv
         <AnimatePresence>
             {activeSublink && (
                 <motion.div
-                    className="w-full h-full bg-secondary flex flex-col py-2"
+                    className="w-full h-auto bg-secondary overflow-y-hidden flex flex-col py-2"
                     initial={{
                         height: '0',
                         visibility: 'hidden'
@@ -28,9 +28,9 @@ const PagesLink = ({ activeSublink, setShowMobileLink, handleLinkClick, setActiv
                         height: '0',
                         visibility: 'hidden'
                     }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.5 }}
                 >
-                    <nav className="mobile-page-link w-full h-full py-6 px-6 flex flex-col items-center gap-4">
+                    <nav className="mobile-page-link w-full h-auto py-6 px-6 flex flex-col items-center gap-4">
                         <NavLink to="/pages/about" onClick={() => pagesLinkHandler("/pages/about")} className={({ isActive }) => (isActive ? 'active' : '')}>
                             <>About Us</>
                             <div className="underline" />
@@ -73,7 +73,7 @@ const BlogLink = ({ activeSublink, setShowMobileLink, handleLinkClick, setActive
         <AnimatePresence>
             {activeSublink && (
                 <motion.div
-                    className="w-full h-full bg-secondary flex flex-col py-2"
+                    className="w-full h-auto bg-secondary overflow-y-hidden flex flex-col py-2"
                     initial={{
                         height: '0',
                         visibility: 'hidden'
@@ -86,9 +86,9 @@ const BlogLink = ({ activeSublink, setShowMobileLink, handleLinkClick, setActive
                         height: '0',
                         visibility: 'hidden'
                     }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.5 }}
                 >
-                    <nav className="mobile-blog-link w-full h-full py-6 px-6 flex flex-col items-center gap-4">
+                    <nav className="mobile-blog-link w-full h-auto py-6 px-6 flex flex-col items-center gap-4">
                         <NavLink to="/blog/blog-rightbar" onClick={() => blogLinkHandler("/blog/blog-rightbar")} className={({ isActive }) => (isActive ? 'active' : '')}>
                             <>Blog - Right Sidebar</>
                             <div className="underline" />
@@ -119,7 +119,7 @@ const MenuLink = ({ activeSublink, setShowMobileLink, handleLinkClick, setActive
         <AnimatePresence>
             {activeSublink && (
                 <motion.div
-                    className="w-full h-full bg-secondary flex flex-col py-2"
+                    className="w-full h-auto bg-secondary overflow-y-hidden flex flex-col py-2"
                     initial={{
                         height: '0',
                         visibility: 'hidden'
@@ -132,9 +132,9 @@ const MenuLink = ({ activeSublink, setShowMobileLink, handleLinkClick, setActive
                         height: '0',
                         visibility: 'hidden'
                     }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.5 }}
                 >
-                    <nav className="mobile-menu-link w-full h-full py-6 px-6 flex flex-col items-center gap-4">
+                    <nav className="mobile-menu-link w-full h-auto py-6 px-6 flex flex-col items-center gap-4">
                         <NavLink to="/menu/our-menu" onClick={() => menuLinkHandler("/menu/our-menu")} className={({ isActive }) => (isActive ? 'active' : '')}>
                             <>Menu - Our Menu</>
                             <div className="underline" />
@@ -161,7 +161,7 @@ const ReservationLink = ({ activeSublink, setShowMobileLink, handleLinkClick, se
         <AnimatePresence>
             {activeSublink && (
                 <motion.div
-                    className="w-full h-full bg-secondary flex flex-col py-2"
+                    className="w-full h-auto bg-secondary overflow-y-hidden flex flex-col py-2"
                     initial={{
                         height: '0',
                         visibility: 'hidden'
@@ -174,9 +174,9 @@ const ReservationLink = ({ activeSublink, setShowMobileLink, handleLinkClick, se
                         height: '0',
                         visibility: 'hidden'
                     }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.5 }}
                 >
-                    <nav className="mobile-reservation-link w-full h-full py-6 px-6 flex flex-col items-center gap-4">
+                    <nav className="mobile-reservation-link w-full h-auto py-6 px-6 flex flex-col items-center gap-4">
                         <NavLink to="/reservation/book-table" onClick={() => menuLinkHandler("/reservation/book-table")} className={({ isActive }) => (isActive ? 'active' : '')}>
                             <>Reservation - Book Table</>
                             <div className="underline" />
@@ -208,10 +208,10 @@ const ShopLink = ({ activeSublink, setShowMobileLink, handleLinkClick, setActive
         <AnimatePresence>
             {activeSublink && (
                 <motion.div
-                    className="w-full h-full bg-secondary flex flex-col py-2"
+                    className="w-full h-auto bg-secondary overflow-y-hidden flex flex-col py-2"
                     initial={{
                         height: '0',
-                        visibility: 'hidden'
+                        visibility: 'hidden',
                     }}
                     animate={{
                         height: '100%',
@@ -221,9 +221,9 @@ const ShopLink = ({ activeSublink, setShowMobileLink, handleLinkClick, setActive
                         height: '0',
                         visibility: 'hidden'
                     }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.5 }}
                 >
-                    <nav className='mobile-shop-link w-full h-full flex flex-col items-center'>
+                    <nav className='mobile-shop-link w-full h-auto flex flex-col items-center'>
                         {shopLinks.map(({ name, Component }) => (
                             <div className='w-full h-auto' key={name}>
                                 <span className='w-full h-10 flex justify-between items-center text-stone-600 font-medium' onClick={() => mobileShoplinkHandler(name)}>{name} <><IoIosArrowForward /></></span>
