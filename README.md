@@ -2,7 +2,7 @@ Coffee Shop Website Template
 
 Hi Developers!
 
-Shopcafe is a website template build by ReactJS. ReactJS is one of libraries for building user interface components. It is maintained by Facebook and a community of individual developers and companies. The website is a fully responsive design and friendly. So the website has great SEO and looks great on various devices and screen sizes.
+Shopffee is a website template build by ReactJS. ReactJS is one of libraries for building user interface components. It is maintained by Facebook and a community of individual developers and companies. The website is a fully responsive design and friendly. So the website has great SEO and looks great on various devices and screen sizes.
 
 Tech stack:
 
