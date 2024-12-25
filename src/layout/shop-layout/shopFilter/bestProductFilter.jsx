@@ -1,11 +1,19 @@
 import React from 'react';
 import Rating from '../../../components/rating';
 import { getRating } from '../../../utilities/getRating';
+import { useNavigate } from 'react-router-dom';
 
 const BestProductFilter = ({ shopData }) => {
+  const navigate = useNavigate();
+
   const maxLikes = Math.max(...shopData.map((data) => data.like));
 
   const filteredProducts = shopData.filter((data) => data.like === maxLikes);
+
+  const onClickProduct = (to) => {
+    window.scrollTo(0, 0);
+    navigate(to)
+  }
 
   return (
     <div className="flex flex-col items-start gap-4">
@@ -18,7 +26,7 @@ const BestProductFilter = ({ shopData }) => {
               <img className="w-full h-auto" src={product.image} alt={product.name} />
             </div>
             <div className="w-full h-auto flex flex-col items-start gap-1">
-              <h2 className="text-lg font-medium text-stone-600 hover:text-accent hover:cursor-pointer transition-colors duration-200">{product.name}</h2>
+              <h2 className="text-lg font-medium text-stone-600 hover:text-accent hover:cursor-pointer transition-colors duration-200" onClick={() => onClickProduct('/shop/product-layout/singleProduct')}>{product.name}</h2>
               <Rating maxStars={5} rating={rating} />
               <p className="text-base text-accent">${product.price}</p>
             </div>

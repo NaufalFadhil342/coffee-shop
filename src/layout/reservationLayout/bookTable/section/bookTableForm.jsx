@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { tableHoursData, tablePersonData } from '../../../../data/dummyCoffee';
+import { useNotification } from '../../../../context/notificationContext';
 
 const BookTableForm = ({ mainPage }) => {
   const today = new Date().toISOString().split('T')[0];
@@ -7,6 +8,7 @@ const BookTableForm = ({ mainPage }) => {
   const [selectedPerson, setSelectedPerson] = useState('2 people');
   const [selectedHours, setSelectedHours] = useState('9:00 a.m');
   const [selectedDate, setSelectedDate] = useState(today);
+  const { addNotification } = useNotification();
 
   const tableSubmit = async (e) => {
     e.preventDefault();
@@ -24,6 +26,8 @@ const BookTableForm = ({ mainPage }) => {
       const bookedData = Object.fromEntries(formData);
 
       console.log('book table:', bookedData);
+      addNotification("Table has been booked! Please wait 'til you get confirm from email.");
+
 
       setSelectedPerson('2 people');
       setSelectedHours('9:00 a.m');

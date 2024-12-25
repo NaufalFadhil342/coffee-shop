@@ -11,12 +11,18 @@ const Info = ({ setInfo, infoOpen }) => {
   const feedIsOpen = (id) => setOpenFeed(id);
   const feedIsClosed = () => setOpenFeed(null);
 
+  const handleClose = (e) => {
+    if (e.target === e.currentTarget) {
+      setInfo(false);
+    }
+  }
+
   return (
     <AnimatePresence>
       {infoOpen && (
-        <div className="w-[22rem] h-screen absolute z-[5] top-0 right-0 overflow-hidden p-8">
+        <div className="w-full h-screen absolute z-[5] top-0 right-0 overflow-hidden p-8" onClick={handleClose}>
           <motion.div
-            className="absolute top-0 right-0 w-full h-full overflow-y-auto bg-secondary flex flex-col gap-8 p-8 z-[5] "
+            className="absolute top-0 right-0 w-[22rem] h-full overflow-y-auto bg-secondary flex flex-col gap-8 p-8 z-[5] "
             initial={{
               right: '-22rem',
             }}

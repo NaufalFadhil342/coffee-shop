@@ -1,6 +1,7 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate, NavLink } from 'react-router-dom';
 import { PagesLink, BlogLink, MenuLink, ReservationLink, ShopLink } from './mobileSublink';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const links = [
     { name: 'Pages', Component: PagesLink },
@@ -29,8 +30,15 @@ const MobileNavlink = ({ showMobileLink, setShowMobileLink }) => {
     }
 
     return (
-        <Fragment>
-            {showMobileLink && <section className="w-full h-screen py-6 px-8 block bg-secondary absolute top-0 left-0 z-50 lg:hidden">
+        <AnimatePresence>
+            {showMobileLink && <motion.section
+                className="w-full h-screen py-6 px-8 block overflow-y-auto bg-secondary absolute top-0 left-0 z-50 lg:hidden"
+                initial={{ y: '-100%' }}
+                animate={{ y: '0' }}
+                exit={{ y: '-100%' }}
+                transition={{ duration: 0.5 }}
+            >
+                <button className='w-full h-auto font-semibold text-3xl text-stone-800 hover:text-accent duration-200 transition-colors absolute top-8 left-0 flex justify-center' onClick={() => setShowMobileLink(false)}>x</button>
                 <nav className='w-full h-full flex flex-col gap-4 items-center justify-center'>
                     <NavLink to='/' onClick={() => homeLinkHandler('/')} className={`home-link text-stone-800 font-medium ${({ isActive }) => (isActive ? 'active' : '')}`}>
                         <>Home</>
@@ -43,8 +51,8 @@ const MobileNavlink = ({ showMobileLink, setShowMobileLink }) => {
                         </div>
                     ))}
                 </nav>
-            </section>}
-        </Fragment>
+            </motion.section>}
+        </AnimatePresence>
     )
 }
 

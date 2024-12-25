@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNotification } from '../../../../context/notificationContext';
 
 const ReservationForm = () => {
   const initialFormState = {
@@ -13,6 +14,7 @@ const ReservationForm = () => {
 
   const [reservationForm, setReservationForm] = useState(initialFormState);
   const [errors, setErrors] = useState({});
+  const { addNotification } = useNotification();
 
   const reservationHandle = (e) => {
     const { name, value } = e.target;
@@ -61,6 +63,7 @@ const ReservationForm = () => {
       formData.append('notes', reservationForm.notes);
 
       const reservationData = Object.fromEntries(formData);
+      addNotification("reservation has been booked! Please wait 'til you get confirm from email.")
 
       console.log('reservation:', reservationData);
       setReservationForm(initialFormState);
