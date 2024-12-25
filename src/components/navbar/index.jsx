@@ -45,7 +45,7 @@ const Navbar = ({ isScrolled }) => {
       </div>
       <div className="w-full h-full flex items-center justify-center">
         <h1 className={`text-4xl font-bold hover:text-accent cursor-pointer transition-colors duration-300 ${isScrolled ? 'text-stone-800' : 'text-white'}`} onClick={() => navigate('/')}>
-          Coffee
+          Shopcafe
         </h1>
       </div>
       <div className="w-auto h-full flex justify-end gap-4">
