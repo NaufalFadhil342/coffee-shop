@@ -23,7 +23,7 @@ const Footer = () => {
           @ 2024 <Link className="text-white hover:text-accent duration-200 transition-colors hover:cursor-pointer">naudhil.com</Link>, All rights reserved.
         </div>
         <div className="w-auto h-full">
-          <h1 className="text-4xl font-bold text-white">Coffee</h1>
+          <h1 className="text-4xl font-bold text-white">Shopcafe</h1>
         </div>
         <div className="w-auto h-full flex items-center">
           <p className="text-white font-medium text-[15px]">Start your day with coffee</p>
