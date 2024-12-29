@@ -1,8 +1,8 @@
-Coffee Shop Website Template
+Shopcafe Theme Website
 
 Hi Developers!
 
-Shopcafe is a website template build by ReactJS. ReactJS is one of libraries for building user interface components. It is maintained by Facebook and a community of individual developers and companies. The website is a fully responsive design and friendly. So the website has great SEO and looks great on various devices and screen sizes.
+Shopcafe is a website template build by ReactJS. ReactJS is the library for building user interface components. It is maintained by Facebook and a community of individual developers and companies. The website is a fully responsive design and user-friendly. So the website has great SEO and looks great on various devices and screen sizes.
 
 Tech stack:
 
@@ -19,7 +19,8 @@ Running program:
 To run the program, you need to install the following packages:
 
 - you already have nodejs and npm installed.
-- run the following command in your terminal: `npm install` to install all the packages.
+- run the following command in your terminal:
+- `npm install` to install all the packages.
 - run the `npm start` command to start the program.
 - open your browser and navigate to `http://localhost:3000/` to see the website.
 - you can also run the `npm run build` command to build the website for production.
