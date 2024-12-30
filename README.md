@@ -85,13 +85,13 @@ ShopCafe/
 
 6.1 Changing Colors and Fonts
 
-- Navigate to src/assets/styles (or equivalent style directory).
+- Because this template use tailwind, you can change colors and fonts by modifying the tailwind.config.js file.
 
-- Modify the CSS/SCSS variables to update colors and fonts globally.
+- Modify the CSS/SCSS if you want added some styles.
 
   6.2 Updating Images
 
-- Replace existing images in the src/assets/images/ folder with your own.
+- Replace existing images in the src/assets/ folder with your own.
 
 - Ensure file names match or update references in the respective components.
 
