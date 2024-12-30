@@ -20,7 +20,7 @@ const Footer = () => {
       </div>
       <div className="px-[3rem] py-6 w-full h-auto flex flex-col md:flex-row md:justify-between items-center gap-6 bg-stone-900">
         <div className="w-auto h-full text-white font-medium text-[15px]">
-          @ 2024 <Link className="text-white hover:text-accent duration-200 transition-colors hover:cursor-pointer">naudhil.com</Link>, All rights reserved.
+          @ 2024 <Link className="text-white hover:text-accent duration-200 transition-colors hover:cursor-pointer">naudhildev.com</Link>, All rights reserved.
         </div>
         <div className="w-auto h-full">
           <h1 className="text-4xl font-bold text-white">Shopcafe</h1>
