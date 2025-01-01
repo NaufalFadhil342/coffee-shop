@@ -141,19 +141,19 @@ Additional Features
 
 Common Issues:
 
-1. Dependencies Not Installing:
+  1. Dependencies Not Installing:
 
-   - Ensure Node.js and npm are installed properly.
+     - Ensure Node.js and npm are installed properly.
 
-   - Try running npm cache clean --force before installing again.
+     - Try running npm cache clean --force before installing again.
 
-2. Development Server Not Starting:
+  2. Development Server Not Starting:
 
-   - Check if another process is using port 3000 and terminate it.
+     - Check if another process is using port 3000 and terminate it.
 
-   - Use a different port by running PORT=3001 npm start.
+     - Use a different port by running PORT=3001 npm start.
 
-3. License
+10. License
 
 This template is licensed for one-time use per purchase. Redistribution, resale, or unauthorized sharing is prohibited. For further details, refer to the ThemeForest license agreement.
 
